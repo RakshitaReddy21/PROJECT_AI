@@ -41,8 +41,8 @@ export const TabNav: React.FC<TabNavProps> = ({ tabs, activeTab, onTabChange }) 
               className={({ isActive }) =>
                 `px-4 py-2.5 text-sm font-medium border-b-2 rounded-t-lg whitespace-nowrap transition-all ${
                   isActive
-                    ? 'border-[#F29B73] bg-[#FFF0E8] text-[#292524] font-semibold shadow-sm'
-                    : 'border-transparent text-[#78716C] hover:text-[#292524] hover:bg-[#FFF7F2]'
+                    ? 'border-[#FF6B35] bg-[#FFEBE0] text-[#1F1917] font-semibold shadow-sm'
+                    : 'border-transparent text-[#574E4A] hover:text-[#1F1917] hover:bg-[#FFF0E5]'
                 }`
               }
             >
@@ -57,8 +57,8 @@ export const TabNav: React.FC<TabNavProps> = ({ tabs, activeTab, onTabChange }) 
             onClick={() => onTabChange?.(tab.key)}
             className={`px-4 py-2.5 text-sm font-medium border-b-2 rounded-t-lg whitespace-nowrap transition-all ${
               isActive
-                ? 'border-[#F29B73] bg-[#FFF0E8] text-[#292524] font-semibold shadow-sm'
-                : 'border-transparent text-[#78716C] hover:text-[#292524] hover:bg-[#FFF7F2]'
+                ? 'border-[#FF6B35] bg-[#FFEBE0] text-[#1F1917] font-semibold shadow-sm'
+                : 'border-transparent text-[#574E4A] hover:text-[#1F1917] hover:bg-[#FFF0E5]'
             }`}
           >
             {content}

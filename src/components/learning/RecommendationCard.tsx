@@ -39,17 +39,17 @@ export const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommen
   }[recommendation.priority] as 'rust' | 'amber' | 'neutral';
 
   return (
-    <Card className="p-5 bg-white border border-[#F1E8E3] rounded-xl transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-float border-l-4 border-l-[#F29B73] group">
+    <Card className="p-5 bg-white border border-[#F4E3D8] rounded-xl transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-float border-l-4 border-l-[#FF6B35] group">
       <div className="flex items-start justify-between gap-3 mb-2">
         <div className="flex items-center space-x-2.5">
-          <div className="p-2 bg-[#FFF0E8] text-[#E9825B] rounded-lg">
+          <div className="p-2 bg-[#FFEBE0] text-[#FF6B35] rounded-lg">
             <Icon className="w-4 h-4" />
           </div>
           <div>
             <span className="text-[10px] font-mono text-ink-faint uppercase tracking-wider font-semibold">
               {recommendation.projectTitle}
             </span>
-            <h4 className="font-display text-sm font-semibold text-[#292524] group-hover:text-[#E9825B] transition-colors">
+            <h4 className="font-display text-sm font-semibold text-[#1F1917] group-hover:text-[#E85A2A] transition-colors">
               {recommendation.title}
             </h4>
           </div>
@@ -63,18 +63,18 @@ export const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommen
 
       {/* Expandable "Why is Aurelia recommending this?" Inspector */}
       {isExpanded && (
-        <div className="mt-3 p-3 bg-[#FFF8F5] rounded-xl border border-[#F1E8E3] text-xs font-mono space-y-2 animate-fade-in">
-          <div className="flex items-center space-x-1.5 text-[#E9825B] font-semibold">
-            <Sparkles className="w-3.5 h-3.5 text-[#F29B73]" />
+        <div className="mt-3 p-3 bg-[#FFF8F4] rounded-xl border border-[#F4E3D8] text-xs font-mono space-y-2 animate-fade-in">
+          <div className="flex items-center space-x-1.5 text-[#E85A2A] font-semibold">
+            <Sparkles className="w-3.5 h-3.5 text-[#FF6B35]" />
             <span className="text-[11px] uppercase tracking-wider">Aurelia Cognitive Signals</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] pt-1">
-            <div className="p-2 bg-white border border-[#F1E8E3] rounded-lg">
+            <div className="p-2 bg-white border border-[#F4E3D8] rounded-lg">
               <span className="text-ink-faint block text-[10px] uppercase font-semibold">Cognitive Trigger</span>
               <span className="text-ink-soft">{recommendation.evidence || 'Pattern identified from recent study session'}</span>
             </div>
-            <div className="p-2 bg-white border border-[#F1E8E3] rounded-lg">
+            <div className="p-2 bg-white border border-[#F4E3D8] rounded-lg">
               <span className="text-ink-faint block text-[10px] uppercase font-semibold">Learning Alignment</span>
               <span className="text-ink-soft">Direct prerequisite for core project learning goal</span>
             </div>
@@ -82,10 +82,10 @@ export const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommen
 
           <div className="flex items-center justify-between text-[11px] pt-1 px-1 text-ink-faint">
             <span className="flex items-center gap-1">
-              <Target className="w-3 h-3 text-[#10B981]" /> Expected Gain: +10-15% mastery
+              <Target className="w-3 h-3 text-[#FF6B35]" /> Expected Gain: +10-15% mastery
             </span>
-            <span className="flex items-center gap-1 text-[#E9825B] font-semibold">
-              <Zap className="w-3 h-3 text-[#F59E0B]" /> High Retention Impact
+            <span className="flex items-center gap-1 text-[#E85A2A] font-semibold">
+              <Zap className="w-3 h-3 text-[#FF7A18]" /> High Retention Impact
             </span>
           </div>
         </div>
@@ -95,7 +95,7 @@ export const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommen
         <button
           type="button"
           onClick={() => setIsExpanded(!isExpanded)}
-          className="text-xs font-mono text-[#F29B73] hover:text-[#E9825B] inline-flex items-center gap-1 font-medium transition-colors"
+          className="text-xs font-mono text-[#FF6B35] hover:text-[#E85A2A] inline-flex items-center gap-1 font-medium transition-colors"
         >
           <Brain className="w-3.5 h-3.5" />
           <span>Why is Aurelia recommending this?</span>

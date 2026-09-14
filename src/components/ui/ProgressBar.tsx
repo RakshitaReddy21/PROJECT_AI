@@ -20,9 +20,9 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
   const clampedValue = Math.min(100, Math.max(0, value));
 
   const variants = {
-    signal: 'bg-signal',
-    indigo: 'bg-[#F29B73]',
-    amber: 'bg-amber',
+    signal: 'bg-[#FF6B35]',
+    indigo: 'bg-[#FF6B35]',
+    amber: 'bg-[#FF7A18]',
     rust: 'bg-rust',
   };
 
@@ -41,7 +41,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
           <span>{clampedValue}%</span>
         </div>
       )}
-      <div className={twMerge('w-full bg-[#FFF0E8]/70 rounded-full overflow-hidden border border-[#F1E8E3]', sizes[size])}>
+      <div className={twMerge('w-full bg-[#FFEBE0] rounded-full overflow-hidden border border-[#FFC8B0]/60', sizes[size])}>
         <div
           className={twMerge('h-full transition-all duration-500 rounded-full', variants[variant])}
           style={{ width: `${clampedValue}%` }}

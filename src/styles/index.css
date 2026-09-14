@@ -5,36 +5,36 @@
 @layer base {
   body {
     @apply bg-paper text-ink font-sans antialiased selection:bg-peach-light selection:text-peach-strong;
-    background-color: #FFFCF9;
+    background-color: #FFF8F4;
   }
 }
 
-/* Custom Warm Ambient Mesh Backgrounds */
+/* Custom Warm Vibrant Ambient Peach & Orange Backgrounds */
 .ambient-bg-dashboard {
   background-image: 
-    radial-gradient(at 100% 0%, rgba(248, 201, 176, 0.25) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(255, 240, 232, 0.6) 0px, transparent 50%),
-    radial-gradient(at 50% 50%, rgba(255, 252, 249, 0.8) 0px, transparent 70%);
+    radial-gradient(at 100% 0%, rgba(255, 107, 53, 0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(255, 200, 176, 0.4) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(255, 248, 244, 0.9) 0px, transparent 70%);
 }
 
 .ambient-bg-tutor {
   background-image: 
-    radial-gradient(at 90% 0%, rgba(242, 155, 115, 0.12) 0px, transparent 55%),
-    radial-gradient(at 10% 100%, rgba(248, 201, 176, 0.2) 0px, transparent 50%);
+    radial-gradient(at 90% 0%, rgba(255, 107, 53, 0.14) 0px, transparent 55%),
+    radial-gradient(at 10% 100%, rgba(255, 122, 24, 0.12) 0px, transparent 50%);
 }
 
 .ambient-bg-analytics {
   background-image: 
-    radial-gradient(at 100% 0%, rgba(248, 201, 176, 0.2) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
+    radial-gradient(at 100% 0%, rgba(255, 122, 24, 0.14) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(255, 107, 53, 0.1) 0px, transparent 50%);
 }
 
 /* Ambient Subtle Grid */
 .ambient-grid {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(41, 37, 36, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(41, 37, 36, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(44, 28, 23, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(44, 28, 23, 0.04) 1px, transparent 1px);
 }
 
 /* Knowledge Flow Connector Lines */
@@ -48,7 +48,7 @@
   bottom: -16px;
   width: 2px;
   height: 16px;
-  background: linear-gradient(to bottom, #F29B73, transparent);
+  background: linear-gradient(to bottom, #FF6B35, transparent);
 }
 
 /* Custom smooth scroll & micro-interactions */
@@ -58,16 +58,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #FFFCF9;
+  background: #FFF8F4;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #EADFD9;
+  background: #FFC8B0;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #F8C9B0;
+  background: #FF6B35;
 }
 
 /* Hide scrollbar utility */

@@ -31,21 +31,21 @@ export const AdminShell: React.FC = () => {
   ];
 
   return (
-    <div className="flex min-h-screen bg-[#FFFCF9] text-[#292524]">
+    <div className="flex min-h-screen bg-[#FFF8F4] text-[#1F1917]">
       {/* Warm Premium Admin Sidebar */}
-      <aside className="w-64 bg-white border-r border-[#F1E8E3] flex flex-col h-screen sticky top-0">
-        <div className="h-14 px-5 flex items-center justify-between border-b border-[#F1E8E3]">
+      <aside className="w-64 bg-white border-r border-[#F4E3D8] flex flex-col h-screen sticky top-0">
+        <div className="h-14 px-5 flex items-center justify-between border-b border-[#F4E3D8]">
           <div className="flex items-center space-x-2">
-            <div className="p-1.5 bg-[#FFF0E8] text-[#F29B73] border border-[#F8C9B0] rounded-md">
+            <div className="p-1.5 bg-[#FFEBE0] text-[#FF6B35] border border-[#FFC8B0] rounded-md">
               <ShieldAlert className="w-4 h-4" />
             </div>
-            <span className="font-sans font-semibold text-sm text-[#292524] tracking-tight">
+            <span className="font-sans font-semibold text-sm text-[#1F1917] tracking-tight">
               AI Study Companion Admin
             </span>
           </div>
           <Link
             to="/dashboard"
-            className="p-1 rounded text-ink-faint hover:text-ink hover:bg-[#FFF7F2] transition-colors"
+            className="p-1 rounded text-ink-faint hover:text-ink hover:bg-[#FFF8F4] transition-colors"
             title="Return to Learner App"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -67,12 +67,12 @@ export const AdminShell: React.FC = () => {
                   className={({ isActive }) =>
                     `flex items-center px-3 py-2 text-xs font-medium rounded-md transition-colors ${
                       isActive
-                        ? 'bg-[#FFF0E8] text-[#292524] border border-[#F8C9B0] font-semibold'
-                        : 'text-[#78716C] hover:text-[#292524] hover:bg-[#FFF7F2]'
+                        ? 'bg-[#FFEBE0] text-[#1F1917] border border-[#FFC8B0] font-semibold'
+                        : 'text-[#574E4A] hover:text-[#1F1917] hover:bg-[#FFF0E5]'
                     }`
                   }
                 >
-                  <Icon className="w-4 h-4 mr-2.5 text-[#F29B73]" />
+                  <Icon className="w-4 h-4 mr-2.5 text-[#FF6B35]" />
                   {item.label}
                 </NavLink>
               );
@@ -80,14 +80,14 @@ export const AdminShell: React.FC = () => {
           </nav>
         </div>
 
-        <div className="p-4 border-t border-[#F1E8E3] flex items-center justify-between text-xs text-ink-faint">
+        <div className="p-4 border-t border-[#F4E3D8] flex items-center justify-between text-xs text-ink-faint">
           <div className="truncate">
             <p className="text-ink font-medium truncate">{user?.name}</p>
             <p className="text-[10px] text-ink-faint font-mono">System Admin</p>
           </div>
           <button
             onClick={handleLogout}
-            className="p-1.5 rounded-lg text-[#78716C] hover:text-[#C5221F] hover:bg-[#FEE2E2] transition-colors"
+            className="p-1.5 rounded-lg text-[#574E4A] hover:text-[#C5221F] hover:bg-[#FEE2E2] transition-colors"
             title="Log Out"
           >
             <LogOut className="w-4 h-4" />
@@ -97,18 +97,18 @@ export const AdminShell: React.FC = () => {
 
       {/* Main Admin Content */}
       <div className="flex-1 flex flex-col min-w-0">
-        <header className="h-14 bg-white/90 backdrop-blur-md border-b border-[#F1E8E3] px-6 flex items-center justify-between sticky top-0 z-30 shadow-sm">
-          <h1 className="text-sm font-semibold text-[#292524] font-mono">
+        <header className="h-14 bg-white/90 backdrop-blur-md border-b border-[#F4E3D8] px-6 flex items-center justify-between sticky top-0 z-30 shadow-sm">
+          <h1 className="text-sm font-semibold text-[#1F1917] font-mono">
             Platform Operations & Intelligence
           </h1>
           <div className="flex items-center space-x-3">
-            <span className="px-2.5 py-1 text-[11px] font-mono bg-[#E6F4EA] text-[#059669] border border-[#10B981]/30 rounded-full flex items-center gap-1.5 font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse"></span>
+            <span className="px-2.5 py-1 text-[11px] font-mono bg-[#FFEBE0] text-[#E85A2A] border border-[#FFC8B0] rounded-full flex items-center gap-1.5 font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FF6B35] animate-pulse"></span>
               Live Telemetry
             </span>
             <button
               onClick={handleLogout}
-              className="px-3 py-1.5 text-xs font-mono font-semibold bg-[#FFF0E8] hover:bg-[#F8C9B0] text-[#E9825B] border border-[#F8C9B0] rounded-xl flex items-center gap-1.5 transition-colors"
+              className="px-3 py-1.5 text-xs font-mono font-semibold bg-[#FFEBE0] hover:bg-[#FFC8B0] text-[#E85A2A] border border-[#FFC8B0] rounded-xl flex items-center gap-1.5 transition-colors"
               title="Sign out of System Admin account"
             >
               <LogOut className="w-3.5 h-3.5" />

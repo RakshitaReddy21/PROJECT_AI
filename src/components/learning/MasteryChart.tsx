@@ -33,28 +33,28 @@ export const MasteryChart: React.FC<MasteryChartProps> = ({ data }) => {
         <AreaChart data={data} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
           <defs>
             <linearGradient id="masteryGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#F29B73" stopOpacity={0.35} />
-              <stop offset="95%" stopColor="#F29B73" stopOpacity={0.0} />
+              <stop offset="5%" stopColor="#FF6B35" stopOpacity={0.4} />
+              <stop offset="95%" stopColor="#FF6B35" stopOpacity={0.0} />
             </linearGradient>
           </defs>
-          <CartesianGrid strokeDasharray="3 3" stroke="#F1E8E3" vertical={false} />
-          <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#78716C' }} stroke="#F1E8E3" />
-          <YAxis domain={[0, 100]} tick={{ fontSize: 11, fill: '#78716C' }} stroke="#F1E8E3" />
+          <CartesianGrid strokeDasharray="3 3" stroke="#F4E3D8" vertical={false} />
+          <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#574E4A' }} stroke="#F4E3D8" />
+          <YAxis domain={[0, 100]} tick={{ fontSize: 11, fill: '#574E4A' }} stroke="#F4E3D8" />
           <Tooltip
             contentStyle={{
               backgroundColor: '#FFFFFF',
-              borderColor: '#F8C9B0',
+              borderColor: '#FFC8B0',
               borderRadius: '8px',
               fontSize: '12px',
-              color: '#292524',
-              boxShadow: '0 4px 16px rgba(242,155,115,0.12)',
+              color: '#1F1917',
+              boxShadow: '0 4px 16px rgba(255,107,53,0.15)',
             }}
             formatter={(value: number) => [`${value}% Mastery`, 'Score']}
           />
           <Area
             type="monotone"
             dataKey="mastery"
-            stroke="#F29B73"
+            stroke="#FF6B35"
             strokeWidth={2.5}
             fillOpacity={1}
             fill="url(#masteryGradient)"

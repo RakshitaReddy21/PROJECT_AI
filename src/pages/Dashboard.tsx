@@ -122,19 +122,19 @@ export const Dashboard: React.FC = () => {
         {/* HERO SECTION: YOUR NEXT BEST ACTION + PARALLAX KNOWLEDGE VISUAL */}
         {heroRecommendation && (
           <StaggerItem>
-            <Card className="p-7 bg-gradient-to-r from-[#FFF0E8]/80 via-white to-white border border-[#F8C9B0]/80 rounded-2xl shadow-panel relative overflow-hidden group">
+            <Card className="p-7 bg-gradient-to-r from-[#FFEBE0] via-white to-white border border-[#FFC8B0] rounded-2xl shadow-panel relative overflow-hidden group">
               <div className="space-y-3">
-                <div className="flex items-center space-x-2 px-3 py-1 bg-[#FFF0E8] border border-[#F8C9B0] rounded-full w-fit">
-                  <Sparkles className="w-3.5 h-3.5 text-[#E9825B]" />
-                  <span className="text-xs font-mono font-semibold text-[#E9825B] uppercase tracking-wider">
+                <div className="flex items-center space-x-2 px-3 py-1 bg-[#FFEBE0] border border-[#FFC8B0] rounded-full w-fit">
+                  <Sparkles className="w-3.5 h-3.5 text-[#FF6B35]" />
+                  <span className="text-xs font-mono font-semibold text-[#E85A2A] uppercase tracking-wider">
                     ✦ YOUR NEXT BEST ACTION
                   </span>
                 </div>
 
-                <h2 className="font-display text-xl md:text-2xl font-semibold text-[#292524] leading-tight">
+                <h2 className="font-display text-xl md:text-2xl font-semibold text-[#1F1917] leading-tight">
                   {heroRecommendation.title}
                 </h2>
-                <p className="text-xs md:text-sm text-[#78716C] leading-relaxed">
+                <p className="text-xs md:text-sm text-[#574E4A] leading-relaxed">
                   {heroRecommendation.reason}
                 </p>
 
@@ -218,8 +218,8 @@ export const Dashboard: React.FC = () => {
                   7-Day Activity Velocity
                 </h3>
               </div>
-              <div className="flex items-center space-x-2 px-3 py-1 bg-[#FFF0E8] border border-[#F8C9B0] rounded-full text-[#E9825B] font-mono text-xs font-semibold">
-                <TrendingUp className="w-4 h-4 text-[#F29B73]" />
+              <div className="flex items-center space-x-2 px-3 py-1 bg-[#FFEBE0] border border-[#FFC8B0] rounded-full text-[#E85A2A] font-mono text-xs font-semibold">
+                <TrendingUp className="w-4 h-4 text-[#FF6B35]" />
                 <span>
                   +<AnimatedNumber value={analytics?.learningVelocityPercent ?? 0} />% Learning Velocity
                 </span>
@@ -230,39 +230,39 @@ export const Dashboard: React.FC = () => {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-5">
               <div className="space-y-1">
                 <span className="text-xs font-mono text-ink-faint flex items-center gap-1">
-                  <Flame className="w-3.5 h-3.5 text-[#F29B73]" /> Active Streak
+                  <Flame className="w-3.5 h-3.5 text-[#FF6B35]" /> Active Streak
                 </span>
-                <div className="font-display text-2xl font-semibold text-[#292524] inline-block border-b-2 border-[#F8C9B0]">
+                <div className="font-display text-2xl font-semibold text-[#1F1917] inline-block border-b-2 border-[#FFC8B0]">
                   <AnimatedNumber value={analytics?.activeStreakDays ?? 0} /> Days {analytics?.activeStreakDays ? '🔥' : ''}
                 </div>
               </div>
 
               <div className="space-y-1">
                 <span className="text-xs font-mono text-ink-faint">Total Study Time</span>
-                <p className="font-display text-2xl font-semibold text-[#292524]">
+                <p className="font-display text-2xl font-semibold text-[#1F1917]">
                   <AnimatedNumber value={analytics?.hoursLearned ?? 0} /> Hours
                 </p>
               </div>
 
               <div className="space-y-1">
                 <span className="text-xs font-mono text-ink-faint">Questions Answered</span>
-                <p className="font-display text-2xl font-semibold text-[#292524]">
+                <p className="font-display text-2xl font-semibold text-[#1F1917]">
                   <AnimatedNumber value={analytics?.totalQuestionsAnswered ?? 0} /> Questions
                 </p>
               </div>
 
               <div className="space-y-1">
                 <span className="text-xs font-mono text-ink-faint">Mastery Gain</span>
-                <p className="font-display text-2xl font-semibold text-[#059669]">
+                <p className="font-display text-2xl font-semibold text-[#FF6B35]">
                   +<AnimatedNumber value={analytics?.masteryGain ?? 0} />% Gain
                 </p>
               </div>
             </div>
 
             {/* Sparkline Daily Intensity */}
-            <div className="mt-5 pt-4 border-t border-[#F1E8E3] flex items-center justify-between">
+            <div className="mt-5 pt-4 border-t border-[#F4E3D8] flex items-center justify-between">
               <span className="text-xs font-mono text-ink-faint">Daily Intensity (Mon - Sun):</span>
-              <div className="flex items-end space-x-2 h-8 font-mono text-xs text-[#E9825B]">
+              <div className="flex items-end space-x-2 h-8 font-mono text-xs text-[#E85A2A]">
                 {(analytics?.weeklyIntensity || [
                   { day: 'Mon', count: 0, heightPercent: 15, title: 'Mon: 0 actions' },
                   { day: 'Tue', count: 0, heightPercent: 15, title: 'Tue: 0 actions' },
@@ -277,9 +277,9 @@ export const Dashboard: React.FC = () => {
                     className={`w-5 rounded-t transition-all ${
                       w.count > 0
                         ? w.heightPercent > 70
-                          ? 'bg-[#F29B73] border border-[#E9825B]'
-                          : 'bg-[#F8C9B0] border border-[#F29B73]'
-                        : 'bg-[#FFF0E8] border border-[#F8C9B0]/40'
+                          ? 'bg-[#FF6B35] border border-[#E85A2A]'
+                          : 'bg-[#FFC8B0] border border-[#FF6B35]'
+                        : 'bg-[#FFEBE0] border border-[#FFC8B0]/50'
                     }`}
                     style={{ height: `${w.heightPercent}%` }}
                     title={w.title}
@@ -292,7 +292,7 @@ export const Dashboard: React.FC = () => {
 
         {/* STEPPER: CONTINUOUS LEARNING JOURNEY */}
         <StaggerItem>
-          <Card className="p-5 bg-white border border-[#F1E8E3] rounded-xl shadow-card">
+          <Card className="p-5 bg-white border border-[#F4E3D8] rounded-xl shadow-card">
             <span className="text-[10px] font-mono text-ink-faint font-semibold uppercase tracking-wider mb-3 block">
               Continuous Learning Progression
             </span>
@@ -305,19 +305,19 @@ export const Dashboard: React.FC = () => {
                       <div
                         className={`w-9 h-9 rounded-xl flex items-center justify-center border transition-all ${
                           step.done
-                            ? 'bg-[#FFF0E8] border-[#F8C9B0] text-[#E9825B] shadow-sm font-semibold'
-                            : 'bg-[#FFF8F5] border-[#F1E8E3] text-[#A8A29E]'
+                            ? 'bg-[#FFEBE0] border-[#FFC8B0] text-[#E85A2A] shadow-sm font-semibold'
+                            : 'bg-[#FFF8F4] border-[#F4E3D8] text-[#8C827A]'
                         }`}
                       >
                         <Icon className="w-4 h-4" />
                       </div>
-                      <span className={`text-[11px] font-mono font-medium ${step.done ? 'text-[#292524]' : 'text-ink-faint'}`}>
+                      <span className={`text-[11px] font-mono font-medium ${step.done ? 'text-[#1F1917]' : 'text-ink-faint'}`}>
                         {step.label}
                       </span>
                     </div>
 
                     {idx < journeySteps.length - 1 && (
-                      <div className={`flex-1 h-0.5 min-w-[24px] mx-2 ${step.done ? 'bg-[#F29B73]' : 'bg-[#F1E8E3]'}`} />
+                      <div className={`flex-1 h-0.5 min-w-[24px] mx-2 ${step.done ? 'bg-[#FF6B35]' : 'bg-[#F4E3D8]'}`} />
                     )}
                   </React.Fragment>
                 );
@@ -331,19 +331,19 @@ export const Dashboard: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Active Project Card */}
             {activeProject ? (
-              <FloatingCard className="lg:col-span-2 p-6 bg-white border border-[#F1E8E3] rounded-xl shadow-card flex flex-col justify-between">
+              <FloatingCard className="lg:col-span-2 p-6 bg-white border border-[#F4E3D8] rounded-xl shadow-card flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-[11px] font-mono text-[#E9825B] bg-[#FFF0E8] border border-[#F8C9B0] px-2.5 py-0.5 rounded font-semibold uppercase">
+                    <span className="text-[11px] font-mono text-[#E85A2A] bg-[#FFEBE0] border border-[#FFC8B0] px-2.5 py-0.5 rounded font-semibold uppercase">
                       Active Learning Journey
                     </span>
                     <span className="text-xs font-mono text-ink-faint flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5 text-[#F29B73]" />
+                      <Clock className="w-3.5 h-3.5 text-[#FF6B35]" />
                       Last studied {formatRelativeTime(projectLatestActivity?.timestamp || activeProject.updatedAt)}
                     </span>
                   </div>
 
-                  <h3 className="font-display text-xl font-semibold text-ink leading-tight">
+                  <h3 className="font-display text-xl font-semibold text-[#1F1917] leading-tight">
                     {activeProject.title}
                   </h3>
                   <p className="text-xs text-ink-soft mt-1.5 leading-relaxed">

@@ -82,7 +82,7 @@ export const QuizQuestionCard: React.FC<QuizQuestionCardProps> = ({
               optionStyle = 'border-line/40 opacity-60 bg-paper-sunken text-ink-faint';
             }
           } else if (isThisSelected) {
-            optionStyle = 'border-ink bg-paper-sunken font-semibold shadow-inner';
+            optionStyle = 'border-[#FF6B35] bg-[#FFEBE0] font-semibold shadow-sm text-[#1F1917]';
           }
 
           return (
@@ -94,7 +94,7 @@ export const QuizQuestionCard: React.FC<QuizQuestionCardProps> = ({
             >
               <div
                 className={`w-4 h-4 rounded-full border flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors ${
-                  isThisSelected ? 'border-ink bg-ink text-paper' : 'border-line'
+                  isThisSelected ? 'border-[#FF6B35] bg-[#FF6B35] text-white' : 'border-line'
                 }`}
               >
                 {isThisSelected && <div className="w-1.5 h-1.5 rounded-full bg-paper" />}

@@ -68,12 +68,12 @@ export const Sidebar: React.FC = () => {
       {/* Brand Header */}
       <div className="h-15 px-3.5 flex items-center justify-between border-b border-[#F1E8E3]">
         <div className="flex items-center space-x-2 min-w-0">
-          <div className="p-1.5 bg-[#FFF0E8] text-[#F29B73] border border-[#F8C9B0]/60 rounded-xl shadow-sm flex-shrink-0">
+          <div className="p-1.5 bg-[#FFEBE0] text-[#FF6B35] border border-[#FFC8B0]/80 rounded-xl shadow-sm flex-shrink-0">
             <Sparkles className="w-4 h-4" />
           </div>
           {!collapsed && (
             <div className="min-w-0">
-              <span className="font-display font-bold text-sm text-[#292524] tracking-tight whitespace-nowrap block">
+              <span className="font-display font-bold text-sm text-[#1F1917] tracking-tight whitespace-nowrap block">
                 AI Study Companion
               </span>
             </div>
@@ -83,7 +83,7 @@ export const Sidebar: React.FC = () => {
         {/* Collapse toggle */}
         <button
           onClick={() => setCollapsed(!collapsed)}
-          className="p-1.5 rounded-lg text-ink-faint hover:text-ink hover:bg-[#FFF7F2] transition-colors"
+          className="p-1.5 rounded-lg text-ink-faint hover:text-ink hover:bg-[#FFF8F4] transition-colors"
           title={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
           aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
         >
@@ -100,7 +100,7 @@ export const Sidebar: React.FC = () => {
                 {section.title}
               </p>
             ) : (
-              <div className="w-full border-t border-[#F1E8E3] my-2" />
+              <div className="w-full border-t border-[#F4E3D8] my-2" />
             )}
             <nav className="space-y-1">
               {section.items.map((item) => {
@@ -119,8 +119,8 @@ export const Sidebar: React.FC = () => {
                           collapsed ? 'justify-center p-2.5' : 'px-3.5 py-2.5'
                         } ${
                           isActive
-                            ? 'bg-[#FFF0E8] text-[#292524] border border-[#F8C9B0] shadow-sm font-semibold'
-                            : 'text-[#78716C] hover:text-[#292524] hover:bg-[#FFF7F2]'
+                            ? 'bg-[#FFEBE0] text-[#1F1917] border border-[#FFC8B0] shadow-sm font-semibold'
+                            : 'text-[#574E4A] hover:text-[#1F1917] hover:bg-[#FFF0E5]'
                         }`
                       }
                     >
@@ -129,11 +129,11 @@ export const Sidebar: React.FC = () => {
                           <Icon
                             className={`w-4 h-4 flex-shrink-0 transition-transform duration-200 group-hover:scale-110 ${
                               collapsed ? '' : 'mr-3'
-                            } ${isActive ? 'text-[#E9825B]' : 'text-[#A8A29E] group-hover:text-[#292524]'}`}
+                            } ${isActive ? 'text-[#FF6B35]' : 'text-[#8C827A] group-hover:text-[#1F1917]'}`}
                           />
                           {!collapsed && <span className="truncate">{item.label}</span>}
                           {isActive && !collapsed && (
-                            <span className="ml-auto w-1.5 h-1.5 rounded-full bg-[#E9825B]" />
+                            <span className="ml-auto w-1.5 h-1.5 rounded-full bg-[#FF6B35]" />
                           )}
                         </>
                       )}
@@ -141,7 +141,7 @@ export const Sidebar: React.FC = () => {
 
                     {/* Floating Tooltip when collapsed */}
                     {collapsed && hoveredItem === item.label && (
-                      <div className="fixed left-20 ml-1 z-50 px-3 py-1.5 bg-[#292524] text-white text-xs font-medium rounded-lg shadow-float whitespace-nowrap animate-fade-in pointer-events-none">
+                      <div className="fixed left-20 ml-1 z-50 px-3 py-1.5 bg-[#1F1917] text-white text-xs font-medium rounded-lg shadow-float whitespace-nowrap animate-fade-in pointer-events-none">
                         {item.label}
                       </div>
                     )}
@@ -156,7 +156,7 @@ export const Sidebar: React.FC = () => {
 
 
       {/* Bottom Section: Settings & Profile */}
-      <div className="p-2.5 border-t border-[#F1E8E3] space-y-1">
+      <div className="p-2.5 border-t border-[#F4E3D8] space-y-1">
         {/* Settings */}
         <div
           className="relative"
@@ -170,8 +170,8 @@ export const Sidebar: React.FC = () => {
                 collapsed ? 'justify-center p-2.5' : 'px-3.5 py-2.5'
               } ${
                 isActive
-                  ? 'bg-[#FFF0E8] text-[#292524] border border-[#F8C9B0] shadow-sm font-semibold'
-                  : 'text-[#78716C] hover:text-[#292524] hover:bg-[#FFF7F2]'
+                  ? 'bg-[#FFEBE0] text-[#1F1917] border border-[#FFC8B0] shadow-sm font-semibold'
+                  : 'text-[#574E4A] hover:text-[#1F1917] hover:bg-[#FFF0E5]'
               }`
             }
           >
@@ -180,14 +180,14 @@ export const Sidebar: React.FC = () => {
                 <Settings
                   className={`w-4 h-4 flex-shrink-0 transition-transform duration-200 group-hover:rotate-45 ${
                     collapsed ? '' : 'mr-3'
-                  } ${isActive ? 'text-[#E9825B]' : 'text-[#A8A29E]'}`}
+                  } ${isActive ? 'text-[#FF6B35]' : 'text-[#8C827A]'}`}
                 />
                 {!collapsed && <span className="truncate">Settings</span>}
               </>
             )}
           </NavLink>
           {collapsed && hoveredItem === 'Settings' && (
-            <div className="fixed left-20 ml-1 z-50 px-3 py-1.5 bg-[#292524] text-white text-xs font-medium rounded-lg shadow-float whitespace-nowrap pointer-events-none">
+            <div className="fixed left-20 ml-1 z-50 px-3 py-1.5 bg-[#1F1917] text-white text-xs font-medium rounded-lg shadow-float whitespace-nowrap pointer-events-none">
               Settings
             </div>
           )}
@@ -195,9 +195,9 @@ export const Sidebar: React.FC = () => {
 
         {/* User Profile Card / Sign Out */}
         {!collapsed ? (
-          <div className="pt-2 border-t border-[#F1E8E3] flex items-center justify-between px-2 py-1.5">
+          <div className="pt-2 border-t border-[#F4E3D8] flex items-center justify-between px-2 py-1.5">
             <div className="flex items-center space-x-2.5 min-w-0">
-              <div className="w-8 h-8 rounded-full bg-[#FFF0E8] border border-[#F8C9B0] text-[#E9825B] font-semibold flex items-center justify-center text-xs flex-shrink-0 overflow-hidden shadow-sm">
+              <div className="w-8 h-8 rounded-full bg-[#FFEBE0] border border-[#FFC8B0] text-[#FF6B35] font-semibold flex items-center justify-center text-xs flex-shrink-0 overflow-hidden shadow-sm">
                 {user?.avatarUrl ? (
                   <img src={user.avatarUrl} alt={user.name} className="w-full h-full object-cover" />
                 ) : (

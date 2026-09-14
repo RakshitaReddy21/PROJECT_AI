@@ -11,10 +11,10 @@ export const Badge: React.FC<BadgeProps> = ({ children, className, variant = 'ne
   const base = 'inline-flex items-center font-mono font-medium rounded-full border transition-colors';
 
   const variants = {
-    signal: 'bg-[#E6F4EA] text-[#059669] border-[#10B981]/30',
-    amber: 'bg-[#FEF3C7] text-[#D97706] border-[#F59E0B]/30',
+    signal: 'bg-[#FFEBE0] text-[#E85A2A] border-[#FFC8B0]',
+    amber: 'bg-[#FFF0E5] text-[#E66300] border-[#FFD3B8]',
     rust: 'bg-[#FEE2E2] text-[#DC2626] border-[#EF4444]/30',
-    indigo: 'bg-[#FFF0E8] text-[#E9825B] border-[#F8C9B0]',
+    indigo: 'bg-[#FFEBE0] text-[#FF6B35] border-[#FFC8B0]',
     neutral: 'bg-paper-sunken text-ink-soft border-line',
     outline: 'bg-transparent text-ink border-line',
   };

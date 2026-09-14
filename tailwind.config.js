@@ -5,47 +5,54 @@ export default {
     extend: {
       colors: {
         ink: {
-          DEFAULT: '#292524', // Dark warm charcoal
-          soft: '#78716C',    // Warm gray
-          faint: '#A8A29E',   // Light warm gray
+          DEFAULT: '#1F1917', // Dark warm charcoal text
+          soft: '#574E4A',    // Medium warm text
+          faint: '#8C827A',   // Light warm text
         },
         paper: {
-          DEFAULT: '#FFFCF9', // Warm off-white primary background
-          raised: '#FFFFFF',  // Pure white main surface
-          sunken: '#FFF8F5',  // Subtle light warm neutral
+          DEFAULT: '#FFF8F4', // Warm soft peach-tinted background
+          raised: '#FFFFFF',  // Crisp white surface
+          sunken: '#FFECE3',  // Light warm sunken container
         },
         peach: {
-          light: '#FFF0E8',   // Very subtle peach
-          soft: '#F8C9B0',    // Soft peach
-          DEFAULT: '#F29B73', // Peach accent / CTA
-          strong: '#E9825B',  // Stronger peach / hover
-          dark: '#D97348',    // Darker peach
+          light: '#FFEBE0',   // Soft light peach
+          soft: '#FFC8B0',    // Medium peach border/pill
+          DEFAULT: '#FF6B35', // Primary Vibrant Peach-Orange accent
+          strong: '#E85A2A',  // Stronger hover peach-orange
+          dark: '#C94518',    // Dark chocolate-orange
         },
-        line: '#F1E8E3',      // Very light warm gray border
+        orange: {
+          light: '#FFF0E5',   // Very light orange
+          soft: '#FFD3B8',    // Soft orange border
+          DEFAULT: '#FF7A18', // Bright vibrant orange
+          strong: '#E66300',  // Deep orange
+          dark: '#C45000',    // Dark orange accent
+        },
+        line: '#F4E3D8',      // Warm light peach-gray border line
         rail: {
-          DEFAULT: '#FFFCF9',
+          DEFAULT: '#FFF8F4',
           raised: '#FFFFFF',
-          line: '#F1E8E3',
-          text: '#292524',
+          line: '#F4E3D8',
+          text: '#1F1917',
         },
         signal: {
-          DEFAULT: '#10B981', // Soft emerald green
-          soft: 'rgba(16, 185, 129, 0.1)',
-          strong: '#059669',
+          DEFAULT: '#FF6B35', // Primary vibrant peach-orange
+          soft: 'rgba(255, 107, 53, 0.12)',
+          strong: '#E85A2A',
         },
         amber: {
-          DEFAULT: '#F59E0B',
-          soft: 'rgba(245, 158, 11, 0.1)',
-          strong: '#D97706',
+          DEFAULT: '#FF9647', // Warm orange amber
+          soft: 'rgba(255, 150, 71, 0.14)',
+          strong: '#E66300',
         },
         rust: {
           DEFAULT: '#EF4444',
           soft: 'rgba(239, 68, 68, 0.1)',
         },
         indigo: {
-          DEFAULT: '#F29B73', // Mapped to primary peach accent
-          soft: '#FFF0E8',    // Mapped to light peach
-          strong: '#E9825B',  // Mapped to strong peach
+          DEFAULT: '#FF6B35', // Mapped to primary vibrant peach-orange accent
+          soft: '#FFEBE0',    // Mapped to light peach
+          strong: '#E85A2A',  // Mapped to strong peach
         },
       },
       fontFamily: {
