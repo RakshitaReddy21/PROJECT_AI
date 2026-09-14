@@ -123,7 +123,7 @@ export class AIUsageService {
     const usage = await this.getAIUsage();
 
     const elapsedSeconds = Math.max(1, Math.round((Date.now() - BOOT_TIMESTAMP) / 1000));
-    const failedMaterials = materials.filter((m) => m.stage === 'error').length;
+    const failedMaterials = materials.filter((m) => m.stage === 'failed').length;
     const failedJobs = jobs.filter((j) => j.status === 'failed').length;
     const totalFailures = failedMaterials + failedJobs;
 

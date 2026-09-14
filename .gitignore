@@ -3,3 +3,14 @@ dist/
 .env
 .env.local
 .env.*.local
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# Local database
+*.db
+*.db-shm
+*.db-wal
+
+# TypeScript build cache
+*.tsbuildinfo

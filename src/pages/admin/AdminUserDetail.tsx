@@ -341,15 +341,15 @@ export const AdminUserDetail: React.FC = () => {
                       <div
                         key={msg.id}
                         className={`p-2.5 rounded text-[11px] ${
-                          msg.role === 'user'
-                            ? 'bg-white border border-[#F1E8E3] text-[#292524]'
-                            : 'bg-[#FFF0E8] border border-[#F8C9B0]/60 text-[#292524]'
+                          msg.sender === 'user'
+                            ? 'bg-white border border-[#F4E3D8] text-[#1F1917]'
+                            : 'bg-[#FFEBE0] border border-[#FFC8B0] text-[#1F1917]'
                         }`}
                       >
-                        <span className="block font-bold text-[10px] uppercase text-[#E9825B] mb-0.5">
-                          {msg.role === 'user' ? 'Learner Query' : 'AI Tutor Response'}
+                        <span className="block font-bold text-[10px] uppercase text-[#E85A2A] mb-0.5">
+                          {msg.sender === 'user' ? 'Learner Query' : 'AI Tutor Response'}
                         </span>
-                        <p className="font-sans whitespace-pre-wrap">{msg.content}</p>
+                        <p className="font-sans whitespace-pre-wrap">{msg.text}</p>
                       </div>
                     ))}
                   </div>

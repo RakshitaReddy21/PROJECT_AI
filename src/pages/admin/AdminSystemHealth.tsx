@@ -25,12 +25,12 @@ export const AdminSystemHealth: React.FC = () => {
   }, []);
 
   const storedMaterials = appStorage.get('materials') || [];
-  const queuedMat = storedMaterials.filter((m) => m.stage === 'uploading' || m.stage === 'parsing').length;
-  const runningMat = storedMaterials.filter((m) => m.stage === 'extracting_concepts' || m.stage === 'generating_embeddings').length;
+  const queuedMat = storedMaterials.filter((m) => m.stage === 'uploading').length;
+  const runningMat = storedMaterials.filter((m) => m.stage === 'extracting' || m.stage === 'chunking' || m.stage === 'embedding' || m.stage === 'graphing').length;
   const completedMat = storedMaterials.filter((m) => m.stage === 'ready').length;
-  const failedMat = storedMaterials.filter((m) => m.stage === 'error').length;
+  const failedMat = storedMaterials.filter((m) => m.stage === 'failed').length;
 
-  const queuedJobs = jobs.filter((j) => j.status === 'pending').length + queuedMat;
+  const queuedJobs = jobs.filter((j) => j.status === 'queued').length + queuedMat;
   const runningJobs = jobs.filter((j) => j.status === 'processing').length + runningMat;
   const completedJobs = jobs.filter((j) => j.status === 'completed').length + completedMat;
   const failedJobs = jobs.filter((j) => j.status === 'failed').length + failedMat;
@@ -40,11 +40,11 @@ export const AdminSystemHealth: React.FC = () => {
       id: j.id,
       title: `Job Failure: ${j.type}`,
       desc: j.error || 'Execution encountered a transient worker error.',
-      time: new Date(j.createdAt).toLocaleTimeString(),
+      time: new Date(j.startedAt || j.completedAt || Date.now()).toLocaleTimeString(),
       status: 'FAILED',
       isError: true,
     })),
-    ...storedMaterials.filter((m) => m.stage === 'error').map((m) => ({
+    ...storedMaterials.filter((m) => m.stage === 'failed').map((m) => ({
       id: m.id,
       title: `PDF Extraction Failure: ${m.title}`,
       desc: 'Material text extraction pipeline failed. Retrying OCR fallback.',
