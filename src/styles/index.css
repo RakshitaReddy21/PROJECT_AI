@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-paper text-ink font-sans antialiased selection:bg-peach-light selection:text-peach-strong;
+    background-color: #FFFCF9;
+  }
+}
+
+/* Custom Warm Ambient Mesh Backgrounds */
+.ambient-bg-dashboard {
+  background-image: 
+    radial-gradient(at 100% 0%, rgba(248, 201, 176, 0.25) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(255, 240, 232, 0.6) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(255, 252, 249, 0.8) 0px, transparent 70%);
+}
+
+.ambient-bg-tutor {
+  background-image: 
+    radial-gradient(at 90% 0%, rgba(242, 155, 115, 0.12) 0px, transparent 55%),
+    radial-gradient(at 10% 100%, rgba(248, 201, 176, 0.2) 0px, transparent 50%);
+}
+
+.ambient-bg-analytics {
+  background-image: 
+    radial-gradient(at 100% 0%, rgba(248, 201, 176, 0.2) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
+}
+
+/* Ambient Subtle Grid */
+.ambient-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(41, 37, 36, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(41, 37, 36, 0.03) 1px, transparent 1px);
+}
+
+/* Knowledge Flow Connector Lines */
+.knowledge-flow-line {
+  position: relative;
+}
+.knowledge-flow-line::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -16px;
+  width: 2px;
+  height: 16px;
+  background: linear-gradient(to bottom, #F29B73, transparent);
+}
+
+/* Custom smooth scroll & micro-interactions */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFCF9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #EADFD9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F8C9B0;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Floating Component Interaction Classes */
+.floating-card {
+  @apply transition-all duration-200 hover:-translate-y-1 hover:shadow-float;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-button {
+  @apply transition-all duration-150 ease-out active:scale-[0.98];
+}
+
+.glass-panel {
+  @apply bg-white/90 backdrop-blur-xl border border-line shadow-card;
+}
+
+.glass-card {
+  @apply bg-white/95 backdrop-blur-md border border-line shadow-card hover:border-peach/50 hover:shadow-float transition-all;
+}
+
+.glow-card-indigo {
+  @apply border border-peach/40 shadow-glow-peach;
+}
+
+.glow-card-signal {
+  @apply border border-signal/40 shadow-glow-signal;
+}
+
+.glow-card-amber {
+  @apply border border-amber/40 shadow-glow-amber;
+}
